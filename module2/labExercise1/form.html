@@ -8,9 +8,60 @@
   <header>
     <nav>
       <!-- works like <a href="/index.html">Home</a> -->
-      <a href="/">Home</a>
+      <a href="http://127.0.0.1:5500/module2/labExercise1/index.html">Home</a>
     </nav>
   </header>
+  <form method="POST" action="http://127.0.0.1:5500/form.html">
+    <div>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname">
+  </div>
+
+  <div>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname">
+  </div>
+
+  <div>
+  <input type="radio" id="html" name="coding_language" value="HTML">
+  <label for="html">HTML</label>
+  </div>
+
+  <div>
+  <input type="radio" id="css" name="coding_language" value="CSS">
+  <label for="CSS">CSS</label>
+  </div>
+
+  <div>
+  <input type="radio" id="javascript" name="coding_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="motor1" name="motor1" value="BMW">
+    <label for="motor1">BMW</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="motor2" name="motor2" value="Audi">
+    <label for="motor2">Audi</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="motor3" name="motor3" value="Nissan">
+    <label for="motor1">Nissan</label>
+  </div>
+
+  <label for="motor"> Choose a Motor:</label>
+  <select name="motor" id="motor">
+    <option value="BMW">I own a BMW</option>
+    <option value="Audi">I own a Audi</option>
+    <option value="Nissan">I own a Nissan</option>
+  </select>
+  <div>
+    <input type="submit" value="submit">
+  </div>
+  </form>
 
   <main>
   </main>
