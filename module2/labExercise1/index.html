@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lab Exercise for Module2</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Practice HTML and CSS">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Sarath Satheesan">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- works like <a href="/index.html">Home</a> -->
+      <a href="/">Home</a>
+    </nav>
+  </header>
+  <h1>Learning to Build a Website is Fun</h1>
+  <article>
+    <h2>Building my First Website</h2>
+  <div>Code with HTML</div> <div>Code with CSS</div> <div>Code with jsCode</div>
+  <span>Hyper Text Markup Language</span> <span>Cascading Style Sheet</span> <span>JavaScript Code</span>
+  <P>
+    p represents paragraph    without preserving    spacing
+  </P>
+  <pre>
+    Text in   a pre element
+    is displayed in a fixed-width
+    font, and it preserves
+    both    spaces and
+    line break
+  </pre>
+  <ul>
+    <li>Monday</li>
+    <li>Tuesday</li>
+    <li>Wednesday</li>
+    <li>Thursday</li>
+  </ul>
+  <ol>
+    <li>Winter</li>
+    <li>Spring</li>
+    <ol type="a">
+      <li>Rainy</li>
+      <li>Bloom</li>
+    </ol>
+    <li>Summer</li>
+  </ol>
+</article>
+<article>
+  <h2>HTML elements- Tables, thead, tbody,tr,td,th</h2>
+  <table>
+    <tr>
+      <th colspan="2">Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+      <th>Phone Number</th> <!--Missing tdtag-->
+    </tr>
+    <tr>
+      <td>KPMG</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+      <td>01987654</td>
+    </tr>
+    <tr> <!--copied row-->
+      <td>KPMG</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+      <td>01987654</td>
+    </tr>
+    <tr>
+      <td>Sals Pizza</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+      <td>02123456</td> <!--3rdcell-->
+    </tr>
+    <tr aria-rowspan="2">
+      <td>PWC</td>
+      <td>Rocky Saldona</tr>
+    </tr>
+  </table>
+</article>
+<article>
+  <h2>Adding Image, video and Audio</h2>
+  <img src="https://picsum.photos/400/400" alt="first image" />
+  <img src="html_lab_image.jpg" alt="cloud sky" style="width:400px;height:400px;" />
+
+  <video autoplay width="250">
+    <source src="./assets/flower.webm" type="video/webm">
+    Sorry, your browser doesn't support embedded videos.
+  </video>
+  
+  <audio autoplay src="./assets/t-rex-roar.mp3">
+    Your browser does not support the <code>audio</code> element.
+  </audio>
+</article>
+
+  <main>  
+  </main>
+
+  <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>
