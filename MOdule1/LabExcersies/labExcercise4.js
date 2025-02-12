@@ -28,5 +28,5 @@ greeting("Sarath", "Satheesan")
 // Call the function
 console.log(add(10, 20));
 console.log(sub(30, 15));
-console.log(multiply(105, 20));
+console.log(mul(105, 20));
 console.log(divide(100, 10));
