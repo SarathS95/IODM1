@@ -1,24 +1,111 @@
 /* I. Selectors */
 /* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+article{
+    margin: 20px;
+    padding: 16px;
+    border:2px solid yellow
+}
+.style-me1{
+    color: red;
+}
+#style-me2{
+    color: blue;
+}
+.style-me1#style-me2{
+    color: purple;
+}
 
 /* Put styles for questions 2.1 and 2.2 here */
-
+.my-descendants-are-styled p{
+    background-color: red ;
+}
+.my-children-are-styled > p{
+    background-color: lightgreen;
+}
 
 /* II. Box model and common properties */
 /* Put styles for questions 1-8 here */
-
+.box{
+    background-color: lightsalmon;
+    margin: 24px 48px;
+    padding: 2em 3em 2em 4em;
+    width: 50vw;
+    height: 30vh !important;
+    border: 10px dashed green; 
+    box-sizing: content-box;
+    overflow: scroll;
+    outline: 10px;
+    border-radius: 30px;
+    background-image: url("assets/img1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 /* III. Positioning */
 /* Put styles for questions 1-3 here */
+.position-absolute{
+    position: absolute;
+    top: 0;
+    background-color: green;
+    left: 5;
+}
 
-
+.position-relative{
+    background-color: blueviolet;
+    right: 9;
+}
+.position-sticky{
+    position: sticky;
+    background-color: lawngreen;
+    top: 10;
+}
 /* IV. Styling text */
 /* Put styles for questions 1-10 here */
-
+.text-style{
+    color: crimson;
+    font-size: 25px;
+    line-height: 2;
+    font-family: "Grechen Fuemen", serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 4px;
+    word-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: dotted;
+}
 
 /* V. Styling links */
 /* Put styles for questions 1-3 here */
-
+/* unvistied link */
+a:link{
+    color: lime;
+    font-size: small;
+    font-weight: 200;
+    text-decoration: purple;
+}
+a:active{
+    color: darkred !important; 
+    text-decoration: line-through blue;
+}
+a:visited{
+    color: darkgreen !important;
+    font-style: italic;
+}
 
 /* VI. calc() */
 /* Put styles for questions 1-3 here */
+.calc-style{
+    width: 50vw;
+    background-color: chartreuse;
+    width: calc(100% - 50vw);
+}
+.fixed-width-col{
+    width: 350px;
+    display: inline-block;
+}
+.fluid-col{
+    display: inline-block;
+    width: calc(100% - 350px);
+}
