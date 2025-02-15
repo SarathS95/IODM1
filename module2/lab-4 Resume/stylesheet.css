@@ -1,0 +1,141 @@
+/* Reset all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   p{
+    margin-top: 5px;
+    padding: 0;
+    line-height: 1.5;
+  }
+/* Header section */
+.cv_head{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: grey;
+    padding: 10px;
+    border: 2px solid grey;
+    flex-direction: column;
+    /* max-height: 150px; */
+}
+
+h1{
+    font-size: 30px;
+    font-family: verdana;
+}
+h3{
+    font-size: 20px;
+    font-family: verdana;
+}
+/* Profile picture */
+.cv_pic{
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    margin: 0px;
+}
+/* Body styling */
+.main{
+    max-width: 60%;
+    margin: auto ;
+}
+.flex_container1{
+    background-color: rgb(220, 220, 220);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    flex-grow: 1;
+    width: 100%;
+    gap: 0px;
+}
+
+/* Profile summary */
+.intro{
+    padding: 25px;
+    border: 10px;
+    margin: 0px;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 15px;
+    border-bottom: solid black;
+}
+/* h4 tags */
+h4{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* ul tags */
+ul{
+    padding-left:  15px; ;
+}
+
+/* li tags */
+li{
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Academic Projects */
+.academic_experience{
+    padding: 25px;
+    border: 10px;
+    margin-top: 0px;
+    border-bottom: solid black;
+}
+
+/* Work Exprience */
+.work_experience{
+    padding: 25px;
+    border: 10px;
+    margin-top: 0px;
+    border-bottom: solid black;
+}
+
+/* Reference */
+.reference{
+    padding: 25px;
+    border: 10px;
+    margin-top: 0px;
+}
+
+/* flex_container2 */
+.flex_container2{
+    background-color: rgb(190, 200, 200);
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+}
+/* Contact Information */
+.contact_info{
+    padding: 0.2px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    border-bottom: solid black;
+}
+/* link linkdin (nothing happens) */
+/* a{ 
+    color: blue;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration: underline;
+    color: purple;
+} */
+
+/* Education info */
+.education_info{
+    padding: 0.2px;
+    margin-top: 28px;
+    margin-bottom: 10px;
+    border-bottom: solid black;
+}
+.skills{
+    padding: 0.2;
+    margin-top: 25px;
+    margin-bottom: 10ox;
+}
