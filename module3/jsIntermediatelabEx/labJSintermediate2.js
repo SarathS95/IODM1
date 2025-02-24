@@ -4,5 +4,16 @@
 // b) Write another variant of the truncate function that uses a conditional operator.
 
 
+// function truncate(str,max){
+//     if (str.length > max) {
+//         let trncate1 = str.slice(0, max - 3);
+//         return trncate1 + '...';
+//     } else {
+//         return str;
+//     }
+// }
 
-console.log(truncate('This text will be truncated if it is too long', 25))
+// b) Write another variant of the truncate function that uses a conditional operator.
+const truncate = (str,max) =>
+    str.length > max ? str.slice(0, max - 2)+ '...': str;
+console.log(truncate('This text will be truncated if it is too long', 15))
