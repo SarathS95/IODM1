@@ -28,5 +28,11 @@ function printPhoneBook(contacts){
         console.log(name)
     }
 }
-printPhoneBook(phoneBookABC)
+printPhoneBook(phoneBookABC, phoneBookDEF)
+
+// e) Combine the contents of the two individual Maps into a single phoneBook Map 
+//f) Print out the full list of names in the combined phone book 
+const phoneBook = new Map([...phoneBookABC, ...phoneBookDEF])
+console.log(phoneBook)
+
 

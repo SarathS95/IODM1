@@ -24,3 +24,27 @@ function currencyAddition(float1, float2) {
 }
 console.log(currencyAddition(1.5, 3.9));
 
+// c) Create a function currencyOperation(float1, float2, operation) which 
+// safely performs the given operation (either +, -, / or *) on the two numbers and returns 
+// the correct float result
+function currencyOperation(float1, float2, operation){
+    let a = Math.round(float1 * 100);
+    let b = Math.round(float2 * 100);
+    
+    let result = 
+    (operation === "+") ? (a + b) /100 :
+    (operation === "-") ? (a - b) /100 :
+    (operation === "*") ? (a * b) /100 :
+    (operation === "/") ? (a / b) /100 :
+"Invalid Operation";
+    
+    return result;
+}
+console.log(currencyOperation(1.76, 2.55, '+'))
+console.log(currencyOperation(1.76, 2.55, '-'))
+console.log(currencyOperation(1.76, 2.55, '*'))
+console.log(currencyOperation(1.76, 2.55, '/'))
+
+// d) (Extension) Extend the above function to include a fourth argument numDecimals 
+// which allows the operation to support different amounts of decimal places from 1 to 10.
+// ** did not understand
