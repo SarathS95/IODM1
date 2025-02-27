@@ -1,0 +1,60 @@
+<!-- Creating a template :
+Below is a template for a card with the CSS written alongside. -->
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+          body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e3f2fd;
+          }
+          .card {
+            padding: 10px;
+          }
+          .card-title {
+            font-weight: 600;
+            font-size: 3em;
+            padding: 0 0 10px 0;
+          }
+          .card-description {
+            font-weight: 400;
+            font-size: 2em
+          }
+      </style>
+  </head>
+  <body>
+      <template id="card-template">
+          <div class="card">
+            <div class="card-body">
+              <div class="card-title"></div>
+              <div class="card-text"></div>
+            </div>
+          </div>
+      </template>
+     
+      <div id="card-list"></div>
+
+      <script>
+        const data = [{name: 'bob', age: 23}, {name: 
+          'alice', age: 39}]
+        function addCard(name, age) {
+           // clone the template
+           const template = 
+              document.getElementById("card-template")
+                      .content.cloneNode(true);
+           // populate the template
+           template.querySelector('.card-title').innerText = 
+               `My name is ${name}`;
+           template.querySelector('.card-text').innerText = 
+               `I am ${age} years old`;
+           // include the populated template into the page
+           document.querySelector('#card-list')
+                   .appendChild(template);
+        }
+        data.forEach(names =>{
+        addCard(names.name, names.age);
+        
+      });
+     </script> 
+  </body>
+</html>
