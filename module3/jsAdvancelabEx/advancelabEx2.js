@@ -24,8 +24,10 @@ setTimeout(delayMsg, 100, '#1: Delayed by 100ms');
 setTimeout(delayMsg, 20, '#2: Delayed by 20ms');
 setTimeout(delayMsg, 0, '#3: Delayed by 0ms');
 delayMsg('#4: Not delayed at all')
-setTimeout(delayMsg, 13000, '#5: Delayed by 13seconds'); //5th Test > 10seconds
 
-let cancelledTimerId = setTimeout(delayMsg, 13000, '#5: Delayed by 13seconds');
+// c) Add a fifth test which uses a large delay time (greater than 10 seconds) 
+let cancelledTimerId = setTimeout(delayMsg, 13000, '#5: Delayed by 13seconds');  //5th Test > 10seconds
+
+// d) Use clearTimeout to prevent the fifth test from printing at all. 
 clearTimeout(cancelledTimerId);
 console.log('no message');
