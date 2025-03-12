@@ -11,8 +11,40 @@ router.get('/add', (req, res) => {
     
     res.status(200)
     res.json({result:sum})
- })
+ });
+//  Exercise2
+// Subtract
+router.get('/sub', (req, res) => {
+    let number1 = parseInt(req.query.num1);
+    let number2 = parseInt(req.query.num2);
+    let minus = number1 - number2
 
+    console.log(minus)
+    res.status(200)
+    res.json({result:minus})
+});
+
+// divide
+router.get('/divide', (req, res) => {
+    let number1 = parseInt(req.query.num1);
+    let number2 = parseInt(req.query.num2);
+    let divide = number1 / number2
+
+    console.log(divide)
+    res.status(200)
+    res.json({result:divide})
+});
+
+// multiply
+router.get('/multiply', (req, res) => {
+    let number1 = parseInt(req.query.num1);
+    let number2 = parseInt(req.query.num2);
+    let multiply = number1 * number2
+
+    console.log(multiply)
+    res.status(200)
+    res.json({result:multiply})
+});
  module.exports = router;
 
 //  index.js;

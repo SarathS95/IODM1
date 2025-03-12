@@ -7,9 +7,4 @@ const friends = [
     { id: 6, name: 'Rachael', gender: 'female'}
 ]
 
-// Dyanimic Request param endpoint- get user matching the secific ID
-router.get('/:id', (req, res) => {
-    console.log(req.params)
-})
-
 module.exports = friends;

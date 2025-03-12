@@ -1,25 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const friends = require('../models/friends')
-const app = express();
-const port = 3000;
 
 
 // TODO - #1: Add support to the 'filter' endpoint for a new query parameter 'letter' which filters friends by starting letter
-router.get('/filter',(req, res) => {
-    console.log(req.filter)
-    res.json(req.filter)
-});
 
-router.get('/:name', (req, res)=> {
-    console.log(req.params)
-
-    let userName = req.params.name;
-    let user = user.find(user => user.name == userName)
-
-    user ? res.status(200).json({result: user})
-         : res.status(400).json({result: `User${userName} no found`})
-})
 // TODO - #2: Modify the 'info' route to only return the user-agent, content-type and accept header data
 
 // TODO - #3: Modify the dynamic GET route to return a single friend object matching the dynamic 'id' request parameter
@@ -52,6 +37,17 @@ router.get('/filter', (req, res) => {
         // and an error response when there are no matches
         res.status(404).json({error: "No friends matching gender "+filterGender})
     }  
+})
+router.post('/filter', (req, res) => {
+    console.log(req.body)
+    let letterName = req.body.name;
+    let matchingLetter =[...friends]
+    if(letterName) {
+        matchingLetter = matchingLetter.filter(friend => friend.name == letterName.charAt(0))
+    }
+    friends.push(letterName)
+    res.status(200).json(letterName)
+
 })
 
 // 2. Get information about this request from the headers
@@ -104,3 +100,4 @@ router.put('/:id', (req, res) => {
 })
 
 module.exports = router;
+

@@ -1,9 +1,14 @@
 
 const express = require('express')
- const app = express()
+//  const app = express()
  const port = 3000
  const port1 = 3500
  const port2 = 4000
+ // import the app
+ const app = require('./app');
+ const swaggerUi = require('swagger-ui-express');
+ swaggerDocument = require('./swagger.json');
+ 
  const cors = require("cors");
 const corsOptions = {
     origin: "http://127.0.0.1:5500",
@@ -17,8 +22,13 @@ const testRoutes = require("./routes/myTestRoutes")
 
 cors(corsOptions);
 app.use(cors(corsOptions));
+app.use(express.json());
 
-
+app.use(
+  '/api-docs',
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerDocument)
+ )
  
 
 //  routes

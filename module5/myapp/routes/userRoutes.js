@@ -48,4 +48,3 @@ router.post('/', (req, res) => {
 });
 // ADD TO index.js ABOVE ALL app.use CALLS
 // parse requests of content-type - application/json
-app.use(express.json());
