@@ -18,6 +18,8 @@
       });
       
   });
+
+  // Exercise 6
   test('GET /calculator/sub => difference of numbers', () => {
     return request(app)
       .get(`/calculator/sub?num1=${number1}&num2=${number2}`)
