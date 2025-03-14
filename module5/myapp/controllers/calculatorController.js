@@ -1,8 +1,13 @@
+// exercise 7
+const Calculator = require('../libraries/calculator');
+ let myCalc = new Calculator()
+
 const addNumbers = (req, res) => {
     let number1 = parseInt(req.query.num1);
     let number2 = parseInt(req.query.num2);
+    let sum = myCalc.add(number1,number2)
 
-    let sum = number1 + number2;
+   //  let sum = number1 + number2;
 
     console.log(sum);
 
@@ -13,8 +18,10 @@ const addNumbers = (req, res) => {
  const minusNumbers = (req, res) => {
    let number1 = parseInt(req.query.num1);
    let number2 = parseInt(req.query.num2);
+   let sub = myCalc.minus(number1,number2)
 
-   let sub = number1 - number2;
+
+   // let sub = number1 - number2;
 
    console.log(sub);
 
@@ -25,8 +32,9 @@ const addNumbers = (req, res) => {
 const multiplyNumbers = (req, res) => {
    let number1 = parseInt(req.query.num1);
    let number2 = parseInt(req.query.num2);
+   let multiply = myCalc.multiply(number1,number2)
 
-   let multiply = number1 * number2;
+   // let multiply = number1 * number2;
 
    console.log(multiply);
 
@@ -37,8 +45,9 @@ const multiplyNumbers = (req, res) => {
 const divisionNumbers = (req, res) => {
    let number1 = parseInt(req.query.num1);
    let number2 = parseInt(req.query.num2);
+   let divide = myCalc.divide(number1,number2)
 
-   let divide = number1 / number2;
+   // let divide = number1 / number2;
 
    console.log(divide);
 
