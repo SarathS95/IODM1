@@ -1,6 +1,8 @@
 const ecomRoutes = require('./routes/ecomRoutes');
 const express = require('express');
 const app = express();
+const swaggerUi = require('swagger-ui-express');
+ swaggerDocument = require('./swagger.json');
 const port = 4000;
 
 const cors = require('cors');
@@ -16,6 +18,8 @@ app.get('/', (req, res) => {
 app.use(express.json());
 app.use('/', express.static('public'));
 app.use('/ecom', ecomRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)
+ )
 
 app.listen(port, () => {
     console.log(`Your e-com server is at http://localhost:${port}`)
