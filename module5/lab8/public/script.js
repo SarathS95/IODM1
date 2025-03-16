@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function showProducts(products) {
       productDisplay.innerHTML = "";
       products.forEach(product => {
-          const clone = template.content.cloneNode(true); // ✅ Fix incorrect template usage
+          const clone = template.content.cloneNode(true); 
 
           clone.querySelector(".product-img").src = product.image;
           clone.querySelector(".product-img").alt = product.title;
@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
           clone.querySelector(".card-text").innerText = product.description;
           clone.querySelector(".card-price").innerText = product.price;
 
-          productDisplay.appendChild(clone); // ✅ Append the correct clone
+          productDisplay.appendChild(clone); 
       });
   }
 
   function getCategories(products) {
-      let categories = new Set(["all-categories"]); // ✅ Ensure "All Categories" is an option
+      let categories = new Set(["all-categories"]); 
       products.forEach(product => categories.add(product.category));
 
       categories.forEach(category => {
