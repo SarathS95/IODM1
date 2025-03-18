@@ -6,6 +6,25 @@ import PropsDisplayer from './components/PropsDisplayer'
 import {City} from './components/City'
 import {Pet} from './components/Pet'
 import {Greetings} from './components/Greetings'
+import { FullName } from './components/FullName'
+import { ComplexComment } from './components/ComplexComponents'
+import { Callout } from './components/Callout'
+import MoviesList from './components/MoviesList'
+import BigCats from './components/BigCats'
+import { MoodChanger } from './components/MoodChanger'
+import { Emoji } from './components/Emoji'
+
+
+
+ // object storing comment data - passed as props
+ const comment = {
+  date: new Date(),
+  text: 'I hope you enjoy learning React!',
+  author: { // author is also an object
+      name: 'Hello Kitty',
+      avatarUrl: 'https://placekitten.com/g/64/64',
+  },
+}; 
 
 
 function Welcome(props) { // custom Welcome component
@@ -68,6 +87,31 @@ const spideyJSXFragment = (<>
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+
+
+
+<Emoji />
+ <MoodChanger />
+<MoviesList />
+<BigCats />
+{/* <SingleCats 
+  key= {cat.id}
+  name= {cat.name}
+  img= {cat.image}/> */}
+
+      <Callout title="Nested React Component"
+    message="Simple message with a fancy box applied via composition">
+    <FullName first="Elon" last="Musk" />
+ </Callout>
+
+    {/* render the component, passing object data as props */}
+ <ComplexComment author={comment.author}     
+    date={comment.date} 
+    text={comment.text}/>
+
+
+    <FullName first="Kendrick"  last="Lamar" />
+    <FullName first="Kendrick" middle="John" last="Lamar" />
  {/* Renders the component with no props */}
  <PropsDisplayer />
  <PropsDisplayer prop1="first" prop2="second" prop3={3}/>
