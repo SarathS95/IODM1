@@ -15,9 +15,9 @@ export function Emoji(){
     return (
        <div className="Emoji">
         current Emoji: {emoji}
-        <button onClick={() => setEmoji('😝')}></button>
-        <button onClick={sad}></button>
-        <button onClick={happy}></button>
+        <button onClick={() => setEmoji('😝')}>Excited</button>
+        <button onClick={sad}>Sad</button>
+        <button onClick={happy}>Happy</button>
        </div>
     )
     

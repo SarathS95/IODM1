@@ -1,3 +1,5 @@
+import React, {useState} from "react";
+
 function Movie({title, year, synopsis}) {
     return (
         <>
@@ -10,9 +12,13 @@ function Movie({title, year, synopsis}) {
     )
  }
 
+//  const sortButton = [...movies.keys()].map((moviessort) => (
+//   <buton key={moviessort} onclick={() => handleChangeMovie(moviessort)}/>
+//  ))
+
 function MoviesList() {
     // collection of objects representing movies
-    const movies = [
+    const [movies, setMovies] = useState ([
       {
         title: "The Shawshank Redemption",
         year: 1994,
@@ -28,7 +34,7 @@ function MoviesList() {
         year: 2014,
         synopsis: "Explorers travel through a wormhole in space.",
       },
-    ];
+    ]);
 
 // const movieItems = movies.map{(movie)} => {
 //     <li>{movie.title} {(movie.year)}</li>
@@ -45,7 +51,11 @@ const movieItems = movies.map(movie => (
             )) } */}
             {movieItems}
         </ul>
+        <div className="button-container">{sortButton}</div>
       </div>
     )
    }
+
+
+
    export default MoviesList;

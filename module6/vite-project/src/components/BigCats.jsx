@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { AddCatForm } from "./AddCatForm";
 function SingleCat({name, latinName, image}) {
     return (
         <>
@@ -25,15 +27,32 @@ const cats = [
     { id:6, name: 'Snow leopard', latinName: 'Panthera uncia', image: "https://www.wric.com/wp-content/uploads/sites/74/2022/11/Alakhai-5.jpg?strip=1" },
     { id:7, name: 'Tiger', latinName: 'Panthera tigris', image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOf2ASwwVoO0GXfuFAH6C3HErGRv1eVOjlg&s" },
    ];
+   
+   const [catList, setcatList] = useState (cats)
+const sortCats = () => {
+    setcatList([...catList].sort((a, b) => a.name.localeCompare(b.name)))
+}
+const catFamily = () => {
+    setcatList([...catList].filter(cats => cats.latinName.startsWith("Panthera") ))
+}
 
-   const catItems = cats.map(cats => (
+const resetCats =() => {
+    setcatList(cats);
+}
+
+   const catItems = catList.map(cats => (
     <li key={cats.id}><SingleCat name={cats.name} latinName={cats.latinName} image={cats.image}/></li>
    ))
   
 
    return (
-    <div className="MoviesList componentBox">
+    <div className="BigCats componentBox">
+        <AddCatForm />
+         <button onClick={sortCats}>SortCats</button>
+         <button onClick={catFamily}>Cat Family</button>
+         <button onClick={resetCats}>Reset</button>
         <ul>
+           
             {catItems}
             {/* {cats.map(cats => (
                 <li key= {cats.id}>{cats.name} {cats.latinName} {cats.image}</li>

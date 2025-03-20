@@ -9,10 +9,14 @@ import {Greetings} from './components/Greetings'
 import { FullName } from './components/FullName'
 import { ComplexComment } from './components/ComplexComponents'
 import { Callout } from './components/Callout'
-import MoviesList from './components/MoviesList'
+// import MoviesList from './components/MoviesList'
 import BigCats from './components/BigCats'
 import { MoodChanger } from './components/MoodChanger'
 import { Emoji } from './components/Emoji'
+import { BirthdayTranslator } from './components/BirthdayTranslator'
+import Weather from './components/Weather'
+import LoginForm from './components/LoginForm'
+import ExplodingBomb from './components/ExplodingBomb'
 
 
 
@@ -87,12 +91,13 @@ const spideyJSXFragment = (<>
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-
-
-
+      <ExplodingBomb />
+<LoginForm />
+<Weather />
+<BirthdayTranslator />
 <Emoji />
  <MoodChanger />
-<MoviesList />
+{/* <MoviesList /> */}
 <BigCats />
 {/* <SingleCats 
   key= {cat.id}
