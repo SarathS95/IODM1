@@ -4,6 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Clock } from '../component/Clock'
 import ClockDisplay from '../component/ClockDisplay'
+import { ActivityFinder } from '../component/ActivityFinder'
+import { BitcoinRates } from '../component/BitcoinRates'
+import RefCounter from '../component/RefCounter'
+import VideoPlayer from '../component/VideoPlayer'
+import ReducerCounter from '../component/ReduceCounter'
+import PostListReducer from '../component/PostListReducer'
+import SubscribeForm from '../component/SubscribeForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +25,14 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <ClockDisplay />
+      <SubscribeForm />
+      <PostListReducer />
+      <ReducerCounter />
+      {/* <VideoPlayer /> */}
+      <BitcoinRates />
+      <RefCounter />
+      {/* <ActivityFinder /> */}
+      {/* <ClockDisplay /> */}
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

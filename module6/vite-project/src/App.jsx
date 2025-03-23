@@ -17,6 +17,7 @@ import { BirthdayTranslator } from './components/BirthdayTranslator'
 import Weather from './components/Weather'
 import LoginForm from './components/LoginForm'
 import ExplodingBomb from './components/ExplodingBomb'
+import { Calculator } from './components/Calculator'
 
 
 
@@ -91,7 +92,9 @@ const spideyJSXFragment = (<>
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <ExplodingBomb />
+
+<Calculator />
+<ExplodingBomb />
 <LoginForm />
 <Weather />
 <BirthdayTranslator />
