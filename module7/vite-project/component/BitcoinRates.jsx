@@ -5,10 +5,12 @@
 
 import {useState, useEffect} from "react"
 import { useBitcoin } from "../hooks/useBitcoin";
+import { useEmojiContext } from "../context/EmojiContext";
 const currencies = ['USD', 'AUD', 'NZD', 'GBP', 'EUR', 'SGD'];
  export function BitcoinRates() {
     const [currency, setCurrency] = useState(currencies[0]);
-    const [currencyRates, setCurrencyRates] =useState('')
+    const [currencyRates, setCurrencyRates] =useState('');
+    const {currentEmoji, handleUpdateEmoji} = useEmojiContext();
     let ignore = false;
     
     
@@ -23,10 +25,22 @@ const currencies = ['USD', 'AUD', 'NZD', 'GBP', 'EUR', 'SGD'];
 //     console.log('Cleanup effect')
 // };
 // }, [currency])
+// if (currentEmoji) {
+//     return (
+//         <>
+//         <p>Mood: {currentEmoji}</p>
+//         <button onClick={() => handleUpdateEmoji({})}>Mood clear</button>
+//         </>
+//     )
+// }
 
  
     const options = currencies.map(curr => <option value={curr} key={curr}>{curr}</option>);
     return (
+        <>
+        <p>Mood: {currentEmoji ? currentEmoji:"no emoji"}</p>
+        <button onClick={() => handleUpdateEmoji(null)}>Mood clear</button>
+       
         <div className="BitcoinRates componentBox">
             <h3>Bitcoin Exchange Rate: {data}</h3>
                  {/* {data.coin.bitcoin[currency.toLowerCase()]}  */}
@@ -37,5 +51,6 @@ const currencies = ['USD', 'AUD', 'NZD', 'GBP', 'EUR', 'SGD'];
                 </select>
             </label>
         </div>
+        </>
     )
  }
