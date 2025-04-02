@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // import { BrowserRouter } from 'react-router-dom'
 import AppRoutes from '../routes/AppRoutes'
+import NavBar from '../component/NavBar'
+import { EmojiProvider } from '../context/EmojiContext'
 
 function App() {
 
@@ -13,8 +15,11 @@ function App() {
    
 
       {/* <BrowserRouter> */}
+      <EmojiProvider>
+      <NavBar/>
       <AppRoutes />
       {/* </BrowserRouter> */}
+      </EmojiProvider>
     </>
   )
 }

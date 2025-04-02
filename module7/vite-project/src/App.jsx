@@ -15,6 +15,9 @@ import { UserProvider } from '../context/userContext'
 import LoginForm from '../component/Loginform'
 import MyThemeProvider from '../context/ThemeContext'
 import { EmojiProvider } from '../context/EmojiContext'
+import CustomCard from '../component/CustomCard'
+import MUIDialog from '../component/MUIDialog'
+
 // import { Emoji } from '../component/Emoji'
 
 
@@ -31,6 +34,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+<MUIDialog />
+<CustomCard />
+
       <UserProvider>
         <EmojiProvider>
         <MyThemeProvider>
