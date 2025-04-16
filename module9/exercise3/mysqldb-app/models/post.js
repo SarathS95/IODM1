@@ -1,6 +1,6 @@
 const {DataTypes, Model} = require("sequelize");
 let dbConnect = require("../dbConnect");
-
+const User = require("./user")
 const sequelizeInstance = dbConnect.Sequelize;
 class Post extends Model { }
 
@@ -17,8 +17,12 @@ Post.init({
         type: DataTypes.STRING, allowNull: false
            },
         UserId: {
-        type: DataTypes.INTEGER, allowNull: false, unique: true
-           },
+        type: DataTypes.INTEGER, allowNull: false, references: {
+         model: User,
+         key: "id",
+         indexes:[{unique:true}]
+      }
+   },
         
 },
 

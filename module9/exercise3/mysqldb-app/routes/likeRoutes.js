@@ -12,4 +12,12 @@ const express = require("express");
  router.likes('/create', (req, res) => {
    Controllers.likesController.createLikes(req.body, res)
  })
+
+  router.put('/:id', (req, res) => {
+   Controllers.likeController.updateLike(req, res)
+  })
+ 
+  router.delete('/:id', (req, res) => {
+   Controllers.likeController.deleteLike(req, res)
+  })
  module.exports = router;

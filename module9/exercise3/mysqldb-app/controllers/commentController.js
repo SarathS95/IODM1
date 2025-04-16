@@ -2,8 +2,8 @@
  const Models = require("../models");
 
  // finds all users in DB, then sends array as response
- const getPost = (res) => {
-  Models.Post.findAll({}).then(data => {
+ const getComment = (res) => {
+  Models.Comment.findAll({}).then(data => {
       res.send({result: 200 , data: data});
   }).catch(err => {
      console.log(err);
@@ -11,8 +11,8 @@
   })
  }
 
-const createPost = (data, res) => {
-  Models.Post.create(data).then(data => {
+const createComment = (data, res) => {
+  Models.Comment.create(data).then(data => {
       res.send({ result: 200 , data: data});
   }).catch(err => {
      console.log(err);
@@ -20,8 +20,8 @@ const createPost = (data, res) => {
   })
  }
 
-  const updatePost = (req, res) => {
-   Models.Post.update(req.body, { where: { id: req.params.id }, 
+  const updateComment = (req, res) => {
+   Models.Comment.update(req.body, { where: { id: req.params.id }, 
  returning: true })
      .then(data => {
        res.send({ result: 200, data: data });
@@ -31,8 +31,8 @@ const createPost = (data, res) => {
      });
   };
   
-  const deletePost = (req, res) => {
-   Models.Post.destroy({ where: { id: req.params.id } })
+  const deleteComment = (req, res) => {
+   Models.Comment.destroy({ where: { id: req.params.id } })
      .then(data => {
        res.send({ result: 200, data: data });
      }).catch((err) => {
@@ -42,5 +42,5 @@ const createPost = (data, res) => {
   };
  
  module.exports = {
-   getPost, createPost, updatePost, deletePost
+   getComment, createComment, updateComment, deleteComment
  }

@@ -24,7 +24,7 @@ User.init({
 },
 
 {
-    sequelize: sequelizeInstance, modelName: 'users', // use lowercase plural format
+    sequelize: sequelizeInstance, modelName: 'user', // use lowercase plural format
     timestamps: true, freezeTableName: true
        }
 )
