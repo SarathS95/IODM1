@@ -14,7 +14,7 @@ const express = require("express");
  })
 
   router.put('/:id', (req, res) => {
-   Controllers.postControllerController.updatePost(req, res)
+   Controllers.postController.updatePost(req, res)
   })
  
   router.delete('/:id', (req, res) => {

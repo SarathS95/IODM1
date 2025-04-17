@@ -5,7 +5,7 @@ const express = require("express");
  // matches GET requests sent to /api/users 
 // (the prefix from server.js)
  router.get('/', (req, res) => {
-   Controllers.userController.getUsers(res);
+   Controllers.userController.getUser(res);
  })
  
  // matches POST requests sent to /api/users/create

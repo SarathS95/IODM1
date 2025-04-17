@@ -5,12 +5,12 @@ const express = require("express");
  // matches GET requests sent to /api/likess 
 // (the prefix from server.js)
  router.get('/', (req, res) => {
-   Controllers.likesController.getLikes(res);
+   Controllers.likeController.getLike(res);
  })
  
  // matches likes requests sent to /api/likess/create
- router.likes('/create', (req, res) => {
-   Controllers.likesController.createLikes(req.body, res)
+ router.post('/create', (req, res) => {
+   Controllers.likeController.createLike(req.body, res)
  })
 
   router.put('/:id', (req, res) => {

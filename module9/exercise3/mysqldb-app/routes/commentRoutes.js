@@ -5,12 +5,12 @@ const express = require("express");
  // matches GET requests sent to /api/commentss 
 // (the prefix from server.js)
  router.get('/', (req, res) => {
-   Controllers.commentsController.getComments(res);
+   Controllers.commentController.getComment(res);
  })
  
  // matches comments requests sent to /api/commentss/create
- router.comments('/create', (req, res) => {
-   Controllers.commentsController.createComments(req.body, res)
+ router.post('/create', (req, res) => {
+   Controllers.commentController.createComment(req.body, res)
  })
 
   router.put('/:id', (req, res) => {
