@@ -1,8 +1,8 @@
 "use strict";
 let Models = require("../model");
 
-const getUser = (res) => {
-    Models.User.find({})
+const getLike = (res) => {
+    Models.Like.find({})
     .then(data => res.send({result:200, data: data}))
     .catch(err => {
         console.log(err);
@@ -10,19 +10,19 @@ const getUser = (res) => {
     })
 }
 
-const createUser = (data, res) => {
+const createLike = (data, res) => {
     console.log(data)
-    new Models.User(data).save()
+    new Models.Like(data).save()
     .then(data => res.send({result: 200, data: data}))
     .catch(err => {
         console.log(err)
-        res.send({result: 500, error: err.message})
+        res.send({result: 500, error: err.mesage})
     })
 }
 
-const updateUser = (req, res) => {
+const updateLike = (req, res) => {
     console.log(req.body)
-    Models.User.findByIdAndUpdate(req.params.id, req.body, {
+    Models.Like.findByIdAndUpdate(req.params.id, req.body, {
         new: true})
         .then(data => res.send({result:200, data: data}))
         .catch(err => {
@@ -31,8 +31,8 @@ const updateUser = (req, res) => {
         })
 }
 
-const deleteUser = (req ,res) => {
-    Models.User.findByIdAndDelete(req.params.id)
+const deleteLike = (req ,res) => {
+    Models.Like.findByIdAndDelete(req.params.id)
     .then(data => res.send({result: 200, data: data}))
     .catch(err => {
         console.log(err);
@@ -41,5 +41,5 @@ const deleteUser = (req ,res) => {
 }
 
 module.exports = {
-    getUser, createUser, updateUser, deleteUser
+    getLike, createLike, updateLike, deleteLike
 }
